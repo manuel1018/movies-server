@@ -1,0 +1,168 @@
+:root {
+    --font-nav-bar: rgb(59, 6, 206);
+    --nav-bar-background: rgb(220, 236, 240);
+    --button-register: rgb(7, 32, 87);
+    --back-color: rgb(15, 18, 59);
+}
+
+.nav-bar {
+    position: fixed;
+    color: white;
+    background-color: var(--back-color);
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-bar button {
+    /*
+    width: 130px;
+    margin-right: 15px;
+    margin-left: auto;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgb(7, 7, 102);
+    color: white;
+    border: 1px solid rgb(7, 7, 102);
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    */
+}
+
+.nav-bar button:hover {
+    background-color: rgb(235, 226, 226);
+    transform: scale(1.05);
+    color: var(--button-register);
+    border: white;
+}
+
+.material-icons {
+    visibility: hidden;
+}
+
+.submenu-responsive {
+    font-size: 20px;
+    margin: 0px;
+    width: 100%;
+}
+
+.logo-imagen {
+    margin-left: 15px;
+    width: 140px;
+    text-decoration: none;
+    color: white;
+}
+
+.submenu-responsive a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin: 0px 10px;
+}
+
+.submenu-responsive a:hover {
+    color: rgb(33, 33, 182);
+    font-size: 22px;
+}
+
+.sticky {
+    transition-timing-function: ease;
+    position: fixed;
+    top: 0;
+}
+
+.colorStiky {
+    background-color: rgba(34, 54, 167, 0.8);
+    transition: 1s;
+}
+
+
+/*
+@media (max-width: 991px) {
+    .submenu-responsive a {
+        margin: 0px 0px;
+    }
+}
+*/
+
+@media (max-width: 817px) {
+    .container-image {
+        position: relative;
+    }
+    .nav-bar {
+        background-color: rgb(17, 6, 6);
+        color: white;
+        position: fixed;
+        top: 0px;
+    }
+    .submenu-responsive {
+        display: none;
+    }
+    .submenu-responsive.hide {
+        display: none;
+    }
+    .submenu-responsive.show {
+        width: 100%;
+        margin: 0;
+        background-color: rgb(232, 232, 243);
+        position: absolute;
+        top: 60px;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+    .submenu-responsive a {
+        padding: 5px;
+        color: black;
+    }
+    .submenu-responsive a:hover {
+        background-color: rgb(213, 213, 235);
+    }
+    .material-icons {
+        margin-left: 15px;
+        visibility: visible;
+    }
+    .material-icons:hover {
+        cursor: pointer;
+    }
+    .logo-imagen {
+        margin-left: 15px;
+    }
+}
+
+#search-movies {
+    display: flex;
+    flex-direction: row;
+}
+
+#search-movies button {
+    width: 70px;
+    margin: 0px 5px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgb(7, 7, 102);
+    color: white;
+    border: 1px solid rgb(7, 7, 102);
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+footer {
+    width: 100%;
+    padding: 15px 0px;
+    background-color: rgb(34, 54, 167);
+    color: white;
+    /*
+    top: 0px;
+    position: static;
+    */
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 import { getMovies } from './fetch.js'
 const card = 'card-';
 const emptyMessage = document.getElementsByClassName('emptyMessage hide')[0];
-const findMovie = document.getElementById('search');
+const btnSearchMovie = document.getElementById('search');
 const movie = document.getElementById('input');
 const container = document.getElementsByClassName('wrapper')[0];
 const buttonsNavigator = document.getElementsByClassName('btnNextPrev hide')[0];
@@ -12,7 +12,7 @@ let cardImages = [];
 
 prevButton.addEventListener('click', getPrevSelection);
 nextButton.addEventListener('click', getNextSelection);
-findMovie.addEventListener('click', searchMovie);
+btnSearchMovie.addEventListener('click', searchMovie);
 window.addEventListener('load', createImages);
 
 
@@ -23,9 +23,7 @@ let indexMoviesPage;
 function searchMovie() {
     disablePrevButton();
     enableNextButton();
-
     indexMoviesPage = 1;
-
     wantedMovie = movie.value;
     if (wantedMovie.trim() !== '') {
         listMovies = getMovies(wantedMovie);
@@ -67,7 +65,7 @@ function fillContainerWithImages(list) {
     for (let i = 0; i < list.length; i++) {
         cardImages[i].style.display = "block";
         if (list[i].Poster === "N/A") {
-            cardImages[i].firstChild.setAttribute("src", './empty.jpg');
+            cardImages[i].firstChild.setAttribute("src", '/assets/img/empty.jpg');
         } else {
             cardImages[i].firstChild.setAttribute("src", list[i].Poster);
         }
